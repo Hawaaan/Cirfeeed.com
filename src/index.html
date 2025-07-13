@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <script defer>
+    // JavaScript si menu mobile uu u shaqeeyo
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <nav class="bg-gray-500 text-white p-4 shadow-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center ml-2 mr-4">
+      <img class="w-30 h-14" src="/src/images/irfeed.com.png" alt="">
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-6">
+        <li><a class="relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-yellow-400 after:transition-all after:duration-300 hover:after:w-full" href="#home">Home</a></li>
+        <li><a class="relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-yellow-400 after:transition-all after:duration-300 hover:after:w-full" href="#">About</a></li>
+        <li><a class="relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-yellow-400 after:transition-all after:duration-300 hover:after:w-full" href="#">Services</a></li>
+        <li><a class="relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-yellow-400 after:transition-all after:duration-300 hover:after:w-full" href="#">Contact</a></li>
+      </ul>
+      <div>
+       <button onclick="window.location.href='login.html'" class="bg-gray-400 hover:bg-yellow-500 text-white font-bold py-0.5 px-3 rounded transition duration-300 ease-in-out shadow-lg">Log Out</button>
+
+    </div>
+      <!-- Mobile Button -->
+      <button class="md:hidden" onclick="toggleMenu()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden mt-4 space-y-2">
+      <a href="#" class="block relative  after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-amber-400 after:transition-all after:duration-300 hover:after:w-full">Home</a>
+      <a href="#" class="block relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-amber-400 after:transition-all after:duration-300 hover:after:w-full">About</a>
+      <a href="#" class="block relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-amber-400 after:transition-all after:duration-300 hover:after:w-full">Services</a>
+      <a href="#" class="block relative  after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-amber-400 after:transition-all after:duration-300 hover:after:w-full">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="text-center py-20 bg-gradient-to-br from-gray-800 to-black">
+    <h1 class="text-5xl md:text-6xl font-extrabold text-yellow-400 mb-4">Welcome to Cirfeed</h1>
+    <p class="text-gray-300 text-lg md:text-xl max-w-xl mx-auto">Your daily source of tech news, innovations, gadgets, AI, and more – all from the digital sky.</p>
+    <a href="#" class="mt-8 inline-block bg-gray-500 hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded-full transition">Explore News</a>
+  </section>
+
+  <!-- Latest News Preview -->
+  <section class="px-6 py-12">
+    <h2 class="text-3xl font-bold text-black mb-8">Latest News</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-gray-800 rounded-lg shadow-lg p-4 hover:bg-gray-700 hover:-translate-y-4 transform transition duration-300 ease-in-out">
+        <h3 class="text-xl font-semibold mb-2 text-white">Apple launches M4 chip</h3>
+        <p class="text-gray-400 text-sm">Discover what’s new in Apple’s latest chip and how it changes the game...</p>
+      </div>
+      <div class="bg-gray-800 rounded-lg shadow-lg p-4 hover:bg-gray-700 hover:-translate-y-4 transform transition duration-300 ease-in-out">
+        <h3 class="text-xl font-semibold mb-2 text-white">AI replaces search engines?</h3>
+        <p class="text-gray-400 text-sm">Explore how AI models are reshaping online search as we know it.</p>
+      </div>
+      <div class="bg-gray-800 rounded-lg shadow-lg p-4 hover:bg-gray-700 hover:-translate-y-4 transform transition duration-300 ease-in-out">
+        <h3 class="text-xl font-semibold mb-2 text-white">Top 10 gadgets in 2025</h3>
+        <p class="text-gray-400 text-sm">We ranked the best tech gadgets released this year — from smart glasses to robots.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-center py-6">
+    <p class="text-sm text-gray-500">© 2025 Cirfeed.com – All rights reserved designed by zoja.</p>
+  </footer>
+</body>
+</html>
